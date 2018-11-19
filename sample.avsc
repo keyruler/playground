@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "playground",
+  "namespace": "keyruler.com",
+  "doc": "A set of tests and trials of extension/use of Avro to support keyruler/PII ideas.",
+  "fields": [
+    {
+      "name": "normalstring",
+      "type": "string"
+    },
+    {
+      "name": "encryptedstring",
+      "type": {
+        "type": "string",
+        "logicalType": "keyruler-string",
+        "context": "samplecontext",
+        "isPII": true
+      }
+    },
+    {
+      "name": "encryptedstring2",
+      "type": {
+        "type": "string",
+        "logicalType": "keyruler-string",
+        "context": "samplecontext2",
+        "isPII": false
+      },
+      "default": ""
+    }
+  ]
+}
